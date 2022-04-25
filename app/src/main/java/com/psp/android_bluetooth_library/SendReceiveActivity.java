@@ -33,7 +33,7 @@ public class SendReceiveActivity extends AppCompatActivity {
         setContentView(R.layout.activity_send_receive);
         init();
 
-        // Receive listner
+        // Receive listener
         SendReceive.getInstance().setOnReceiveListener(new BluetoothListener.onReceiveListener() {
             @Override
             public void onReceived(String receivedData) {

@@ -41,7 +41,6 @@ public class SendReceive {
     private static SendReceive instance; // SendReceive Static variable
     private SendReceiveThread sendReceiveThread; // SendReceived Thread
 
-
     // Static method is used to initialize this class at one time
     public static synchronized SendReceive getInstance() {
         if(instance == null) {
@@ -166,6 +165,7 @@ public class SendReceive {
 
         // write method String
         public boolean write(String input) {
+            input = input + "\r\n";
             byte[] msgBuffer = input.getBytes();   //converts entered String into bytes
 
             try {
